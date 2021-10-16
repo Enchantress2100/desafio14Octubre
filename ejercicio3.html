@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 3</title>
+</head>
+
+<body>
+    <div>
+        <div>
+            <h2>
+                Resultado: <span class="resultado"></span>
+            </h2>
+            <div>
+                <div>
+                    <div>
+                        <label for="">Valor 1</label>
+                        <input id="valor1" type="text">
+                    </div>
+                    <div>
+                        <label for="">Valor 2</label>
+                        <input id="valor2" type="text">
+                    </div>
+                    <div style="display: flex">
+                        <button id="btn-sumar" type="button">
+                            Sumar
+                        </button>
+                        <button id="btn-restar" type="button">
+                            Restar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+    //comportamiento boton suma y ejercicio sumar.
+    let botonSuma=document.getElementById("btn-sumar")
+    botonSuma.addEventListener('click', sumar)
+    function sumar(){
+        let valor1=document.getElementById("valor1").value
+        let valor2=document.getElementById("valor2").value
+        let resultadoSuma= parseInt(valor1) + parseInt(valor2)
+        document.querySelector(".resultado").innerHTML=`${resultadoSuma}`
+    }
+    //comportamiento boton resta y ejercicio restar. Si la resta da negativo, debe mostrar 0.
+    let botonResta=document.getElementById("btn-restar")
+    botonResta.addEventListener('click', restar)
+    function restar() {
+        let valor1=document.getElementById("valor1").value
+        let valor2=document.getElementById("valor2").value
+        let resultadoResta= parseInt(valor1) - parseInt(valor2)
+        if (resultadoResta<=0) {
+            resultadoResta=0
+        }
+        document.querySelector(".resultado").innerHTML=`${resultadoResta}` 
+    }
+    </script>
+</body>
+
+</html>
