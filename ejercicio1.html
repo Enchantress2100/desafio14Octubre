@@ -9,39 +9,28 @@
 <body>
     <div>
         <div style="width: 40%;margin: 0 auto">
-            <h2>
-                Escríbenos !!!
-            </h2>
-            <div> <p class="resultado" style="color:green;font-style: italic"></p>
-            </div>
+            <h2>Escríbenos!!!</h2>
+            <div><p class="resultado" style="color:green;font-style: italic"></p></div>
             <form id="formulario">
                 <div>
                     <div style="display: flex;flex-direction: column;">
-                        <label>
-                            Nombre completo
-                        </label>
+                        <label>Nombre completo</label>
                         <input class="nombre" type="text">
                         <p class="errorNombre" style="color:red;font-style: italic;"></p>
                     </div>
                     <div style="display: flex;flex-direction: column;">
-                        <label>
-                            Asunto
-                        </label>
+                        <label>Asunto</label>
                         <input class="asunto" type="text">
                         <p class="errorAsunto" style="color:red;font-style: italic;"></p>
                     </div>
                 </div>
                 <div style="display: flex;flex-direction: column;">
-                    <label>
-                        Mensaje
-                    </label>
+                    <label>Mensaje</label>
                     <textarea class="mensaje"></textarea>
                     <p class="errorMensaje" style="color:red;font-style: italic;"></p>
                 </div>
                 <div>
-                    <button id="botton" type="submit">
-                        Envíar mensaje
-                    </button>
+                    <button id="botton" type="submit">Enviar mensaje</button>
                 </div>
             </form>
         </div>
@@ -89,7 +78,7 @@
 
         let validacionAsunto=/[a-zA-Z]/gim;
         if(validacionAsunto.test(asunto)==false){
-            document.querySelector('.errorAsunto').innerHTML='el asunto es requerido'
+        document.querySelector('.errorAsunto').innerHTML='el asunto es requerido'
         validacion=false
         }
 
@@ -100,8 +89,6 @@
         }
         return validacion;
     }
-
-    </script>
+</script>
 </body>
-
 </html>
